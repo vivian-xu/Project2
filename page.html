@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link rel='stylesheet' type="text/css" href="http://static.jackon.me/bootstrap-3.3.5/css/bootstrap.min.css"></link>
+<link rel='stylesheet' type="text/css" href="http://static.jackon.me/Font-Awesome-4.4.0/css/font-awesome.min.css"></link>
+
+
+<style type="text/css">
+.checkboxTwo{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-left: 9px;
+    border-radius: 100%;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5)  <!--盒子的阴影--!> 
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5) 
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5) 
+    background: #fcfff4;
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+}
+
+.checkboxTwo label {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    cursor: pointer;
+    top: 5.5px;
+    left: 5.5px;
+    border-radius: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+    background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+
+.checkboxTwo label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  opacity: 0;
+  background: #00bf00;
+  background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+  background: linear-gradient(to bottom, #00bf00 0%, #009400 100%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.checkboxTwo label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+.checkboxTwo input[type=checkbox] {
+  visibility: hidden;
+
+}
+.checkboxTwo input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+
+
+
+</style>
+
+
+
+<!--[if lt IE 9]>
+<![endif]-->
+</head>
+
+
+
+
+<body>
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table able-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>头像</th>
+                    <th>昵称</th>
+                    <th>最后消息时间</th>
+                    <th>是/否推送</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="pic1.jpg" class="img-responsive" alt="Responsive image"></td>
+                <td>niki</td>
+                <td>2015-03-10</td>
+                <td>
+                    <div class="checkboxTwo">
+                        <input type="checkbox" value="1" id="checkboxTwoInput1" name="ch1" />
+                        <label for="checkboxTwoInput1"></label> <!-- input中的id与label里的for关联 --!>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td><img src="pic0.jpg" class="img-responsive" alt="Responsive image"></td>
+                <td>niki</td>
+                <td>2015-03-10</td>
+                <td>
+                    <div class="checkboxTwo">
+                        <input type="checkbox" value="2" id="checkboxTwoInput2" name="ch2" />
+                        <label for="checkboxTwoInput2"></label>
+                    </div>                
+                </td>
+            </tr>
+
+
+            </tbody> 
+        
+        </table>
+    </div>
+</div>
+
+    <script src="http://static.jackon.me/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script src="http://static.jackon.me/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
